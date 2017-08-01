@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3487B191F302349006092EC /* TouchIDAuthenticatorUtlity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3487B181F302349006092EC /* TouchIDAuthenticatorUtlity.swift */; };
+		E3487B1B1F30261A006092EC /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3487B1A1F30261A006092EC /* LoginPageViewController.swift */; };
 		E36F18BE1F2ECCF700F5ABC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36F18BD1F2ECCF700F5ABC7 /* AppDelegate.swift */; };
-		E36F18C01F2ECCF700F5ABC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36F18BF1F2ECCF700F5ABC7 /* ViewController.swift */; };
+		E36F18C01F2ECCF700F5ABC7 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36F18BF1F2ECCF700F5ABC7 /* OrdersViewController.swift */; };
 		E36F18C31F2ECCF700F5ABC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E36F18C11F2ECCF700F5ABC7 /* Main.storyboard */; };
 		E36F18C51F2ECCF700F5ABC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E36F18C41F2ECCF700F5ABC7 /* Assets.xcassets */; };
 		E36F18C81F2ECCF700F5ABC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E36F18C61F2ECCF700F5ABC7 /* LaunchScreen.storyboard */; };
 		E36F18D31F2ECCF800F5ABC7 /* TouchIDAuthenticationDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36F18D21F2ECCF800F5ABC7 /* TouchIDAuthenticationDemoTests.swift */; };
+		E36F18DE1F2ECF5200F5ABC7 /* ViewOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36F18DD1F2ECF5200F5ABC7 /* ViewOrdersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +29,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E3487B181F302349006092EC /* TouchIDAuthenticatorUtlity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDAuthenticatorUtlity.swift; sourceTree = "<group>"; };
+		E3487B1A1F30261A006092EC /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		E36F18BA1F2ECCF700F5ABC7 /* TouchIDAuthenticationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchIDAuthenticationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E36F18BD1F2ECCF700F5ABC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E36F18BF1F2ECCF700F5ABC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E36F18BF1F2ECCF700F5ABC7 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		E36F18C21F2ECCF700F5ABC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E36F18C41F2ECCF700F5ABC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E36F18C71F2ECCF700F5ABC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +41,8 @@
 		E36F18CE1F2ECCF700F5ABC7 /* TouchIDAuthenticationDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchIDAuthenticationDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E36F18D21F2ECCF800F5ABC7 /* TouchIDAuthenticationDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDAuthenticationDemoTests.swift; sourceTree = "<group>"; };
 		E36F18D41F2ECCF800F5ABC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E36F18DD1F2ECF5200F5ABC7 /* ViewOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOrdersViewController.swift; sourceTree = "<group>"; };
+		E36F18E01F2ECFE400F5ABC7 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +69,7 @@
 				E36F18BC1F2ECCF700F5ABC7 /* TouchIDAuthenticationDemo */,
 				E36F18D11F2ECCF800F5ABC7 /* TouchIDAuthenticationDemoTests */,
 				E36F18BB1F2ECCF700F5ABC7 /* Products */,
+				E36F18DF1F2ECFE400F5ABC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,11 +86,14 @@
 			isa = PBXGroup;
 			children = (
 				E36F18BD1F2ECCF700F5ABC7 /* AppDelegate.swift */,
-				E36F18BF1F2ECCF700F5ABC7 /* ViewController.swift */,
+				E36F18BF1F2ECCF700F5ABC7 /* OrdersViewController.swift */,
 				E36F18C11F2ECCF700F5ABC7 /* Main.storyboard */,
 				E36F18C41F2ECCF700F5ABC7 /* Assets.xcassets */,
 				E36F18C61F2ECCF700F5ABC7 /* LaunchScreen.storyboard */,
 				E36F18C91F2ECCF700F5ABC7 /* Info.plist */,
+				E36F18DD1F2ECF5200F5ABC7 /* ViewOrdersViewController.swift */,
+				E3487B181F302349006092EC /* TouchIDAuthenticatorUtlity.swift */,
+				E3487B1A1F30261A006092EC /* LoginPageViewController.swift */,
 			);
 			path = TouchIDAuthenticationDemo;
 			sourceTree = "<group>";
@@ -94,6 +105,14 @@
 				E36F18D41F2ECCF800F5ABC7 /* Info.plist */,
 			);
 			path = TouchIDAuthenticationDemoTests;
+			sourceTree = "<group>";
+		};
+		E36F18DF1F2ECFE400F5ABC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E36F18E01F2ECFE400F5ABC7 /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +165,7 @@
 				TargetAttributes = {
 					E36F18B91F2ECCF700F5ABC7 = {
 						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
 					};
 					E36F18CD1F2ECCF700F5ABC7 = {
 						CreatedOnToolsVersion = 9.0;
@@ -197,7 +217,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E36F18C01F2ECCF700F5ABC7 /* ViewController.swift in Sources */,
+				E36F18C01F2ECCF700F5ABC7 /* OrdersViewController.swift in Sources */,
+				E36F18DE1F2ECF5200F5ABC7 /* ViewOrdersViewController.swift in Sources */,
+				E3487B191F302349006092EC /* TouchIDAuthenticatorUtlity.swift in Sources */,
+				E3487B1B1F30261A006092EC /* LoginPageViewController.swift in Sources */,
 				E36F18BE1F2ECCF700F5ABC7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,10 +374,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MV3J9MQS8N;
 				INFOPLIST_FILE = TouchIDAuthenticationDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wayfair.org.TouchIDAuthenticationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,10 +392,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MV3J9MQS8N;
 				INFOPLIST_FILE = TouchIDAuthenticationDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wayfair.org.TouchIDAuthenticationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -422,6 +455,7 @@
 				E36F18D91F2ECCF800F5ABC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E36F18DA1F2ECCF800F5ABC7 /* Build configuration list for PBXNativeTarget "TouchIDAuthenticationDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +464,7 @@
 				E36F18DC1F2ECCF800F5ABC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
