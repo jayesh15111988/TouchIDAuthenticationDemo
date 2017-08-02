@@ -34,6 +34,7 @@ class ViewOrdersViewController: UIViewController, UIAlertViewDelegate, AlertDisp
             alertController.addTextField(configurationHandler: { (textField) in
                 textField.isSecureTextEntry = true
                 textField.placeholder = "Password"
+          
                 textField.text = defaultPassword
             })
 

@@ -6,7 +6,6 @@
 //  Copyright © 2017 Jayesh Kawli. All rights reserved.
 //
 
-import UIKit
 import LocalAuthentication
 
 let defaultUserName = "jdotkawli@gmail.com"
