@@ -11,6 +11,9 @@ import LocalAuthentication
 let defaultUserName = "jdotkawli@gmail.com"
 let defaultPassword = "password"
 
+let lastSeenOrdersTimestampKey = "lastSeenOrdersTimestampKey"
+let touchIDAuthenticationtimeout = 15
+
 protocol AlertDisplayable {
     func showAlert()
     func authneticationSuccssful()
@@ -25,6 +28,12 @@ class TouchIDAuthenticatorUtlity {
     }
 
     func authenticateUser() {
+
+        if !isAuthenticationRequired() {
+            self.presenter.authneticationSuccssful()
+            return
+        }
+
         let context = LAContext()
         var error: NSError?
         let reasonString = "Authentication is needed to access orders"
@@ -64,5 +73,14 @@ class TouchIDAuthenticatorUtlity {
             }
             self.presenter.showAlert()
         }
+    }
+
+    func isAuthenticationRequired() -> Bool {
+        let lastSeenTimestamp = (UserDefaults.standard.value(forKey: lastSeenOrdersTimestampKey) as? TimeInterval) ?? 0.0
+        let currentTimestamp = Date().timeIntervalSince1970
+        UserDefaults.standard.setValue(currentTimestamp, forKey: lastSeenOrdersTimestampKey)
+        print("Current timestamp \(currentTimestamp)")
+        print("Last seen timestamp \(lastSeenTimestamp)")
+        return currentTimestamp - lastSeenTimestamp > 15
     }
 }
